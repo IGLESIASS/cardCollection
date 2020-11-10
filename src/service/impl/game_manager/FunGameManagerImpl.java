@@ -7,10 +7,11 @@ import service.GameManager;
 
 public class FunGameManagerImpl implements GameManager {
 
-  private final BaseCardService baseCardService = new BaseCardServiceImpl();
+    private final BaseCardService baseCardService = new BaseCardServiceImpl();
 
-  @Override
-  public void startGame() {
-    BaseCard playerCard = baseCardService.createCard(new BaseCard());
-  }
+    @Override
+    public void startGame() {
+        BaseCard playerCard = baseCardService.createCard(new BaseCard());
+        System.out.println(playerCard.toString());
+    }
 }

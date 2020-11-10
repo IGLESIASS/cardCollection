@@ -1,9 +1,7 @@
 package util.type;
 
 public enum GameType {
-
-  FUN,
-  NORMAL,
-  HARD
-
+    FUN,
+    NORMAL,
+    HARD
 }

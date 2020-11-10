@@ -1,5 +1,7 @@
 package data.spell;
 
-public class CommonSpellCard {
+import data.BaseCard;
+
+public class CommonSpellCard extends BaseCard {
 
 }

@@ -18,25 +18,19 @@ public class MyGame {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println(baseCardService.createRandomCard().toString());
-        System.out.println(baseCardService.createRandomCard().toString());
-        System.out.println(baseCardService.createRandomCard().toString());
-        System.out.println(baseCardService.createRandomCard().toString());
-
-
         try {
             gameManager = inputService.setSelectedGameType(scan);
             gameManager.startGame();
+            BaseCard playerInputCard = inputService.createBaseCardByInput(scan);
+            System.out.println(playerInputCard.toString());
 
+            System.out.println(baseCardService.createRandomCard().toString());
+            System.out.println(baseCardService.createRandomCard().toString());
+            System.out.println(baseCardService.createRandomCard().toString());
+            System.out.println(baseCardService.createRandomCard().toString());
         } catch (GameException ex) {
             gameHelper.notifyAboutGameEnd();
         }
-
-
-
-        BaseCard playerInputCard = inputService.createBaseCardByInput(scan);
-        System.out.println(playerInputCard.toString());
-
 
     }
 }
